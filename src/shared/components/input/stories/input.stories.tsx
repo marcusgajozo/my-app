@@ -11,7 +11,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   args: {
-    label: "First Name",
-    placeholder: "John",
+    label: "Search",
+    placeholder: "",
+    required: false,
+    errorMessage: "",
   },
 };
