@@ -23,20 +23,29 @@ export function Input({
   description,
   isPassword = false,
   secureTextEntry,
+  onFocus,
+  onBlur,
   ...props
 }: InputProps) {
   const [isPasswordVisible, setIsPasswordVisible] = useState(isPassword);
+  const [isFocused, setIsFocused] = useState(false);
 
   return (
     <View style={inputStyles.container}>
       {label && (
         <View style={inputStyles.labelContainer}>
-          <Text style={inputStyles.label}>{label}:</Text>
+          <Text>{label}:</Text>
           {required && <Text style={inputStyles.required}>*</Text>}
         </View>
       )}
 
-      <View style={inputStyles.inputWrapper}>
+      <View
+        style={[
+          inputStyles.inputWrapper,
+          isFocused && inputStyles.inputWrapperFocused,
+          !!errorMessage && inputStyles.inputWrapperError,
+        ]}
+      >
         {iconName && (
           <Icon
             name={iconName}
@@ -51,6 +60,14 @@ export function Input({
           placeholder={placeholder}
           placeholderTextColor={theme.colors.primary[400]}
           secureTextEntry={isPasswordVisible}
+          onFocus={(e) => {
+            setIsFocused(true);
+            onFocus?.(e);
+          }}
+          onBlur={(e) => {
+            setIsFocused(false);
+            onBlur?.(e);
+          }}
           {...props}
         />
 

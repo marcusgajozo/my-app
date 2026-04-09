@@ -11,9 +11,6 @@ export const inputStyles = StyleSheet.create({
     gap: 2,
     marginBottom: 2,
   },
-  label: {
-    color: theme.colors.primary[900],
-  },
   inputWrapper: {
     height: 56,
     flexDirection: "row",
@@ -21,18 +18,24 @@ export const inputStyles = StyleSheet.create({
     backgroundColor: theme.colors.tertiary[200],
     borderRadius: 100,
     paddingHorizontal: 16,
-    borderWidth: 1,
-    borderColor: "rgba(0,0,0,0.05)",
+    borderWidth: 1.5,
+    borderColor: theme.colors.primary[300],
+  },
+  inputWrapperFocused: {
+    borderWidth: 2,
+    borderColor: theme.colors.primary[500],
+  },
+  inputWrapperError: {
+    borderWidth: 2,
+    borderColor: theme.colors.danger,
   },
   input: {
     flex: 1,
     height: "100%",
     backgroundColor: "transparent",
-    fontSize: theme.typography["text-md"].fontSize,
-    fontWeight: theme.typography["text-md"].fontWeight,
-    lineHeight: theme.typography["text-md"].lineHeight,
     color: theme.colors.primary[900],
     paddingHorizontal: 8,
+    ...theme.typography["text-md"],
   },
   icon: {
     marginRight: 10,
@@ -46,7 +49,6 @@ export const inputStyles = StyleSheet.create({
     marginLeft: 12,
   },
   description: {
-    color: theme.colors.neutral,
     marginTop: 4,
     marginLeft: 12,
   },
