@@ -9,37 +9,34 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Basic: Story = {
+export const TextLg: Story = {
+  name: "Text lg",
   args: {
-    label: "Search",
-    placeholder: "Digite algo aqui...",
-    required: false,
-    errorMessage: "",
-    description: "Input description",
-    isPassword: false,
+    as: "text-lg",
+    children: "Lorem ipsum dolor sit amet",
   },
 };
 
-export const WithError: Story = {
-  name: "Input with error",
+export const TextMd: Story = {
+  name: "Text md",
   args: {
-    label: "Search",
-    placeholder: "Digite algo aqui...",
-    required: false,
-    errorMessage: "This field is required",
-    description: "",
-    isPassword: false,
+    as: "text-md",
+    children: "Lorem ipsum dolor sit amet",
   },
 };
 
-export const InputPassword: Story = {
-  name: "Input password",
+export const TextSm: Story = {
+  name: "Text sm",
   args: {
-    label: "Search",
-    placeholder: "",
-    required: false,
-    errorMessage: "",
-    description: "",
-    isPassword: true,
+    as: "text-sm",
+    children: "Lorem ipsum dolor sit amet",
+  },
+};
+
+export const TextXs: Story = {
+  name: "Text xs",
+  args: {
+    as: "text-xs",
+    children: "Lorem ipsum dolor sit amet",
   },
 };
