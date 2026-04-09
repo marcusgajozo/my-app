@@ -17,7 +17,7 @@ export function Input({
   label,
   errorMessage,
   required,
-  placeholder = "Search",
+  placeholder = "Digite aqui...",
   iconName,
   description,
   isPassword = false,
