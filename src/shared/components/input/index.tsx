@@ -40,7 +40,7 @@ export function Input({
           <Icon
             name={iconName}
             size={20}
-            color={theme.colors.neutral}
+            color={theme.colors.primary.default}
             style={inputStyles.icon}
           />
         )}
@@ -48,7 +48,7 @@ export function Input({
         <TextInput
           style={inputStyles.input}
           placeholder={placeholder}
-          placeholderTextColor={theme.colors.neutral}
+          placeholderTextColor={theme.colors.primary[500]}
           secureTextEntry={isPasswordVisible}
           {...props}
         />

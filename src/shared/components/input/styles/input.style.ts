@@ -19,7 +19,7 @@ export const inputStyles = StyleSheet.create({
     height: 48,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: theme.colors.tertiary,
+    backgroundColor: theme.colors.tertiary[200],
     borderRadius: 100,
     paddingHorizontal: 16,
     borderWidth: 1,
@@ -46,6 +46,7 @@ export const inputStyles = StyleSheet.create({
   },
   description: {
     color: theme.colors.neutral,
+    fontSize: 13,
     marginTop: 4,
     marginLeft: 12,
   },
