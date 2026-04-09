@@ -20,7 +20,7 @@ export const inputStyles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: theme.colors.tertiary,
-    borderRadius: 30,
+    borderRadius: 21,
     paddingHorizontal: 15,
     borderWidth: 1,
     borderColor: "rgba(0,0,0,0.05)",
@@ -39,6 +39,11 @@ export const inputStyles = StyleSheet.create({
   },
   errorMessage: {
     color: theme.colors.danger,
+    marginTop: 4,
+    marginLeft: 12,
+  },
+  description: {
+    color: theme.colors.neutral,
     marginTop: 4,
     marginLeft: 12,
   },

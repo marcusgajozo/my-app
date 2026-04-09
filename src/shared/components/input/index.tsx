@@ -6,8 +6,9 @@ import { inputStyles } from "./styles/input.style";
 interface InputProps extends React.ComponentProps<typeof TextInput> {
   label?: string;
   errorMessage?: string;
+  description?: string;
   required?: boolean;
-  showIcon?: boolean;
+  iconName?: React.ComponentProps<typeof Icon>["name"];
 }
 
 export function Input({
@@ -15,7 +16,8 @@ export function Input({
   errorMessage,
   required,
   placeholder = "Search",
-  showIcon = true,
+  iconName,
+  description,
   ...props
 }: InputProps) {
   return (
@@ -28,9 +30,9 @@ export function Input({
       )}
 
       <View style={inputStyles.inputWrapper}>
-        {showIcon && (
+        {iconName && (
           <Icon
-            name="search"
+            name={iconName}
             size={20}
             color={theme.colors.neutral}
             style={inputStyles.icon}
@@ -43,6 +45,10 @@ export function Input({
           {...props}
         />
       </View>
+
+      {description && (
+        <Text style={inputStyles.description}>{description}</Text>
+      )}
 
       {errorMessage && (
         <Text style={inputStyles.errorMessage}>{errorMessage}</Text>

@@ -15,5 +15,6 @@ export const Basic: Story = {
     placeholder: "",
     required: false,
     errorMessage: "",
+    description: "",
   },
 };
