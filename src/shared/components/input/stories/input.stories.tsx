@@ -16,5 +16,6 @@ export const Basic: Story = {
     required: false,
     errorMessage: "",
     description: "",
+    isPassword: false,
   },
 };

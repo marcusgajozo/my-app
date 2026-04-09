@@ -16,23 +16,25 @@ export const inputStyles = StyleSheet.create({
     color: theme.colors.black,
   },
   inputWrapper: {
-    height: 54,
+    height: 48,
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: theme.colors.tertiary,
-    borderRadius: 21,
-    paddingHorizontal: 15,
+    borderRadius: 100,
+    paddingHorizontal: 16,
     borderWidth: 1,
     borderColor: "rgba(0,0,0,0.05)",
-  },
-  icon: {
-    marginRight: 10,
   },
   input: {
     flex: 1,
     height: "100%",
+    backgroundColor: "transparent",
     fontSize: 16,
     color: theme.colors.neutral,
+    paddingHorizontal: 8,
+  },
+  icon: {
+    marginRight: 10,
   },
   required: {
     color: theme.colors.danger,

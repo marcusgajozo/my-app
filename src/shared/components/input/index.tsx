@@ -1,5 +1,6 @@
 import { theme } from "@/styles/theme";
-import { Text, TextInput, View } from "react-native";
+import React, { useState } from "react"; // 1. Importar useState
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Icon } from "../icon";
 import { inputStyles } from "./styles/input.style";
 
@@ -9,6 +10,7 @@ interface InputProps extends React.ComponentProps<typeof TextInput> {
   description?: string;
   required?: boolean;
   iconName?: React.ComponentProps<typeof Icon>["name"];
+  isPassword?: boolean;
 }
 
 export function Input({
@@ -18,8 +20,12 @@ export function Input({
   placeholder = "Search",
   iconName,
   description,
+  isPassword = false,
+  secureTextEntry,
   ...props
 }: InputProps) {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(isPassword);
+
   return (
     <View style={inputStyles.container}>
       {label && (
@@ -38,12 +44,27 @@ export function Input({
             style={inputStyles.icon}
           />
         )}
+
         <TextInput
           style={inputStyles.input}
           placeholder={placeholder}
           placeholderTextColor={theme.colors.neutral}
+          secureTextEntry={isPasswordVisible}
           {...props}
         />
+
+        {isPassword && (
+          <TouchableOpacity
+            onPress={() => setIsPasswordVisible(!isPasswordVisible)}
+            activeOpacity={0.7}
+          >
+            <Icon
+              name={isPasswordVisible ? "eye-slash" : "eye"}
+              size={20}
+              color={theme.colors.neutral}
+            />
+          </TouchableOpacity>
+        )}
       </View>
 
       {description && (
