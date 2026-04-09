@@ -1,5 +1,6 @@
-import type { Preview } from "@storybook/react-native";
+import { type Preview } from "@storybook/react-native";
 import { View } from "react-native";
+import { theme } from "../src/styles/theme";
 
 const preview: Preview = {
   parameters: {
@@ -19,7 +20,13 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <View style={{ flex: 1, backgroundColor: "#FFFFFF" }}>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: theme.colors.tertiary[50],
+          padding: 16,
+        }}
+      >
         <Story />
       </View>
     ),
