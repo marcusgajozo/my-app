@@ -1,5 +1,5 @@
 import { theme } from "@/styles/theme";
-import React, { useState } from "react"; // 1. Importar useState
+import React, { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Icon } from "../icon";
 import { inputStyles } from "./styles/input.style";
