@@ -59,19 +59,19 @@ export const theme = {
 
     "text-md": {
       fontSize: 16,
-      fontWeight: "500",
+      fontWeight: "400",
       lineHeight: 24,
     },
 
     "text-sm": {
       fontSize: 14,
-      fontWeight: "500",
+      fontWeight: "400",
       lineHeight: 20,
     },
 
     "text-xs": {
-      fontSize: 12,
-      fontWeight: "500",
+      fontSize: 13,
+      fontWeight: "400",
       lineHeight: 16,
     },
   },
