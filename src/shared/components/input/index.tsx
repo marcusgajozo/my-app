@@ -1,7 +1,8 @@
 import { theme } from "@/styles/theme";
 import React, { useState } from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { TextInput, TouchableOpacity, View } from "react-native";
 import { Icon } from "../icon";
+import { Text } from "../text";
 import { inputStyles } from "./styles/input.style";
 
 interface InputProps extends React.ComponentProps<typeof TextInput> {
@@ -40,7 +41,7 @@ export function Input({
           <Icon
             name={iconName}
             size={20}
-            color={theme.colors.primary.default}
+            color={theme.colors.primary[400]}
             style={inputStyles.icon}
           />
         )}
@@ -48,7 +49,7 @@ export function Input({
         <TextInput
           style={inputStyles.input}
           placeholder={placeholder}
-          placeholderTextColor={theme.colors.primary[500]}
+          placeholderTextColor={theme.colors.primary[400]}
           secureTextEntry={isPasswordVisible}
           {...props}
         />
@@ -68,11 +69,15 @@ export function Input({
       </View>
 
       {description && (
-        <Text style={inputStyles.description}>{description}</Text>
+        <Text as="text-xs" style={inputStyles.description}>
+          {description}
+        </Text>
       )}
 
       {errorMessage && (
-        <Text style={inputStyles.errorMessage}>{errorMessage}</Text>
+        <Text as="text-xs" style={inputStyles.errorMessage}>
+          {errorMessage}
+        </Text>
       )}
     </View>
   );

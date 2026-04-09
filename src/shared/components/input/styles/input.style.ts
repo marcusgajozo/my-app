@@ -9,14 +9,13 @@ export const inputStyles = StyleSheet.create({
   labelContainer: {
     flexDirection: "row",
     gap: 2,
-    marginBottom: 4,
+    marginBottom: 2,
   },
   label: {
-    fontSize: 16,
-    color: theme.colors.black,
+    color: theme.colors.primary[900],
   },
   inputWrapper: {
-    height: 48,
+    height: 56,
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: theme.colors.tertiary[200],
@@ -29,8 +28,10 @@ export const inputStyles = StyleSheet.create({
     flex: 1,
     height: "100%",
     backgroundColor: "transparent",
-    fontSize: 16,
-    color: theme.colors.neutral,
+    fontSize: theme.typography["text-md"].fontSize,
+    fontWeight: theme.typography["text-md"].fontWeight,
+    lineHeight: theme.typography["text-md"].lineHeight,
+    color: theme.colors.primary[900],
     paddingHorizontal: 8,
   },
   icon: {
@@ -46,7 +47,6 @@ export const inputStyles = StyleSheet.create({
   },
   description: {
     color: theme.colors.neutral,
-    fontSize: 13,
     marginTop: 4,
     marginLeft: 12,
   },

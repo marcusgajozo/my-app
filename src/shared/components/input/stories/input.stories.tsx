@@ -17,6 +17,7 @@ export const Basic: Story = {
     errorMessage: "",
     description: "Input description",
     isPassword: false,
+    iconName: "search",
   },
 };
 
