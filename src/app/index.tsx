@@ -1,4 +1,4 @@
-import { Screen } from "@/shared/components/screen";
+import { Screen } from "@/components/screen";
 import { Link } from "expo-router";
 import { Text } from "react-native";
 
