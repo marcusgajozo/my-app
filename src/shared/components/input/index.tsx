@@ -60,7 +60,7 @@ export function Input({
             activeOpacity={0.7}
           >
             <Icon
-              name={isPasswordVisible ? "eye-slash" : "eye"}
+              name={isPasswordVisible ? "eye-off" : "eye"}
               size={20}
               color={theme.colors.neutral}
             />
