@@ -9,5 +9,6 @@ type TextProps = ComponentProps<typeof TextReactnative> & {
 };
 
 export function Text({ as = "text-md", ...props }: TextProps) {
-  return <TextReactnative {...props} />;
+  const textStyles = [theme.typography[as], props.style];
+  return <TextReactnative {...props} style={textStyles} />;
 }

@@ -5,23 +5,23 @@ type TextAs = typeof theme.typography extends Record<infer K, any> ? K : never;
 
 export const textStyle = StyleSheet.create<Record<TextAs, TextStyle>>({
   "text-lg": {
-    fontSize: 24,
-    fontWeight: "700",
-    lineHeight: 32,
+    fontSize: theme.typography["text-lg"].fontSize,
+    fontWeight: theme.typography["text-lg"].fontWeight,
+    lineHeight: theme.typography["text-lg"].lineHeight,
   },
   "text-md": {
-    fontSize: 16,
-    fontWeight: "500",
-    lineHeight: 24,
+    fontSize: theme.typography["text-md"].fontSize,
+    fontWeight: theme.typography["text-md"].fontWeight,
+    lineHeight: theme.typography["text-md"].lineHeight,
   },
   "text-sm": {
-    fontSize: 14,
-    fontWeight: "500",
-    lineHeight: 20,
+    fontSize: theme.typography["text-sm"].fontSize,
+    fontWeight: theme.typography["text-sm"].fontWeight,
+    lineHeight: theme.typography["text-sm"].lineHeight,
   },
   "text-xs": {
-    fontSize: 12,
-    fontWeight: "500",
-    lineHeight: 16,
+    fontSize: theme.typography["text-xs"].fontSize,
+    fontWeight: theme.typography["text-xs"].fontWeight,
+    lineHeight: theme.typography["text-xs"].lineHeight,
   },
 });
