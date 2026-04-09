@@ -1,3 +1,5 @@
+import { TextStyle } from "react-native";
+
 export const theme = {
   colors: {
     primary: {
@@ -55,24 +57,24 @@ export const theme = {
       fontSize: 24,
       fontWeight: "700",
       lineHeight: 32,
-    },
+    } as TextStyle,
 
     "text-md": {
       fontSize: 16,
       fontWeight: "400",
       lineHeight: 24,
-    },
+    } as TextStyle,
 
     "text-sm": {
       fontSize: 14,
       fontWeight: "400",
       lineHeight: 20,
-    },
+    } as TextStyle,
 
     "text-xs": {
       fontSize: 13,
       fontWeight: "400",
       lineHeight: 16,
-    },
+    } as TextStyle,
   },
 } as const;
